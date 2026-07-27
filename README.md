@@ -3,15 +3,20 @@
 ![Arduino](https://img.shields.io/badge/Arduino-Uno-00979D?style=for-the-badge&logo=arduino&logoColor=white)
 ![C++](https://img.shields.io/badge/اللغة-C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 ![Hardware](https://img.shields.io/badge/التنفيذ-Hardware%20Real-2EA44F?style=for-the-badge)
+![YouTube](https://img.shields.io/badge/YouTube-عرض%20عملي-FF0000?style=for-the-badge&logo=youtube&logoColor=white)
 
 > **المستودع:** [HZCS-IoT/Electronics-task3](https://github.com/HZCS-IoT/Electronics-task3)  
-> مشروع إلكترونيات — Smart Methods · **تنفيذ فعلي (Real Hardware)**
+> Smart Methods — Electronics Task 3 · **تنفيذ فعلي على Hardware حقيقي**
+
+[![Smart Gate Demo](https://img.youtube.com/vi/5cQkdeGRd_E/0.jpg)](https://youtu.be/5cQkdeGRd_E)
+
+> 🎬 **[مشاهدة العرض العملي على YouTube](https://youtu.be/5cQkdeGRd_E)**
 
 ---
 
 ## 📖 نبذة عن المشروع
 
-**Smart Gate** (بوابة العبور الذكية) هو نظام تحكم آلي مبني على **Arduino Uno** و**مُنفَّذ فعلياً** على قطع حقيقية — ليس محاكاة. يعمل كبوابة مرور ذكية تفتح وتغلق تلقائياً عند اقتراب الأجسام.
+**Smart Gate** (بوابة العبور الذكية) نظام تحكم آلي مبني على **Arduino Uno** ومُنفَّذ فعلياً على قطع حقيقية — بوابة مرور تفتح وتغلق تلقائياً عند اقتراب الأجسام.
 
 يعتمد المشروع على:
 
@@ -32,7 +37,8 @@
 | [`code/code.ino`](code/code.ino) | كود Arduino | البرنامج الرئيسي للبوابة الذكية |
 | [`pic1.jpg`](pic1.jpg) | صورة | صورة حقيقية للمشروع — منظر عام |
 | [`pic2.jpg`](pic2.jpg) | صورة | صورة حقيقية — تفاصيل التوصيل والمكونات |
-| [`smartgate.mp4`](smartgate.mp4) | فيديو | عرض عملي للمشروع على الأرض |
+| [`smartgate.mp4`](smartgate.mp4) | فيديو | عرض عملي محلي للمشروع |
+| [YouTube Demo](https://youtu.be/5cQkdeGRd_E) | فيديو | عرض عملي على YouTube |
 
 ---
 
@@ -187,7 +193,7 @@ if (distance <= DISTANCE_THRESHOLD && distance > 0) {
 
 ![Smart Gate — صورة حقيقية للمشروع](pic1.jpg)
 
-> **pic1:** صورة للمشروع المُنفَّذ فعلياً — تُظهر Arduino والمكونات وذراع البوابة.
+> **pic1:** صورة للمشروع المُنفَّذ فعلياً — تُظهر Arduino والمكونات وذراع البوابة على Breadboard.
 
 ---
 
@@ -201,9 +207,17 @@ if (distance <= DISTANCE_THRESHOLD && distance > 0) {
 
 ## 🎬 فيديو العرض العملي
 
+### على YouTube
+
+[![Smart Gate — عرض عملي](https://img.youtube.com/vi/5cQkdeGRd_E/maxresdefault.jpg)](https://youtu.be/5cQkdeGRd_E)
+
+> ▶ **[مشاهدة الفيديو على YouTube](https://youtu.be/5cQkdeGRd_E)**
+
+### فيديو محلي
+
 <video src="smartgate.mp4" controls width="720"></video>
 
-> [▶ مشاهدة / تحميل فيديو العرض (smartgate.mp4)](smartgate.mp4)
+> [▶ مشاهدة / تحميل الفيديو المحلي (smartgate.mp4)](smartgate.mp4)
 
 ---
 
@@ -245,5 +259,6 @@ if (distance <= DISTANCE_THRESHOLD && distance > 0) {
 ---
 
 <p align="center">
-  <sub>Smart Gate · HZCS-IoT · Smart Methods · Electronics Task 3 · Real Hardware</sub>
+  <sub>Smart Gate · <a href="https://github.com/HZCS-IoT/Electronics-task3">Electronics-task3</a> · Smart Methods · Real Hardware</sub><br>
+  <sub>🎬 <a href="https://youtu.be/5cQkdeGRd_E">YouTube Demo</a></sub>
 </p>
