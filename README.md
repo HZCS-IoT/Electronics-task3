@@ -2,16 +2,16 @@
 
 ![Arduino](https://img.shields.io/badge/Arduino-Uno-00979D?style=for-the-badge&logo=arduino&logoColor=white)
 ![C++](https://img.shields.io/badge/اللغة-C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
-![Tinkercad](https://img.shields.io/badge/المحاكاة-Tinkercad-FF6600?style=for-the-badge)
+![Hardware](https://img.shields.io/badge/التنفيذ-Hardware%20Real-2EA44F?style=for-the-badge)
 
 > **المستودع:** [HZCS-IoT/Electronics-task3](https://github.com/HZCS-IoT/Electronics-task3)  
-> مشروع إلكترونيات — Smart Methods · Arduino + Tinkercad
+> مشروع إلكترونيات — Smart Methods · **تنفيذ فعلي (Real Hardware)**
 
 ---
 
 ## 📖 نبذة عن المشروع
 
-**Smart Gate** (بوابة العبور الذكية) هو نظام تحكم آلي مبني على **Arduino Uno** يُحاكي بوابة مرور ذكية تفتح وتغلق تلقائياً بناءً على قرب الأجسام.
+**Smart Gate** (بوابة العبور الذكية) هو نظام تحكم آلي مبني على **Arduino Uno** و**مُنفَّذ فعلياً** على قطع حقيقية — ليس محاكاة. يعمل كبوابة مرور ذكية تفتح وتغلق تلقائياً عند اقتراب الأجسام.
 
 يعتمد المشروع على:
 
@@ -30,9 +30,9 @@
 | الملف | النوع | الوصف |
 |-------|-------|-------|
 | [`code/code.ino`](code/code.ino) | كود Arduino | البرنامج الرئيسي للبوابة الذكية |
-| [`pic1.jpg`](pic1.jpg) | صورة | مخطط الدائرة — منظر عام |
-| [`pic2.jpg`](pic2.jpg) | صورة | مخطط الدائرة — تفاصيل التوصيل |
-| [`smartgate.mp4`](smartgate.mp4) | فيديو | عرض عملي للمشروع |
+| [`pic1.jpg`](pic1.jpg) | صورة | صورة حقيقية للمشروع — منظر عام |
+| [`pic2.jpg`](pic2.jpg) | صورة | صورة حقيقية — تفاصيل التوصيل والمكونات |
+| [`smartgate.mp4`](smartgate.mp4) | فيديو | عرض عملي للمشروع على الأرض |
 
 ---
 
@@ -46,8 +46,9 @@
 | 4 | **Red LED** | 1 | إشارة — البوابة مغلقة |
 | 5 | **Yellow LED** | 1 | إشارة — البوابة مفتوحة |
 | 6 | **Resistor 220Ω** | 2 | حماية اللمبات من التيار الزائد |
-| 7 | **Breadboard** | 1 | تركيب وتجربة الدائرة |
+| 7 | **Breadboard** | 1 | تركيب الدائرة الإلكترونية |
 | 8 | **Jumper Wires** | — | أسلاك التوصيل بين المكونات |
+| 9 | **كابل USB** | 1 | تغذية Arduino ورفع الكود |
 
 ---
 
@@ -180,21 +181,21 @@ if (distance <= DISTANCE_THRESHOLD && distance > 0) {
 
 ---
 
-## 🖼️ صور المشروع
+## 🖼️ صور المشروع (تنفيذ فعلي)
 
-### صورة 1 — منظر عام للدائرة
+### صورة 1 — منظر عام للمشروع
 
-![Smart Gate — منظر عام للدائرة](pic1.jpg)
+![Smart Gate — صورة حقيقية للمشروع](pic1.jpg)
 
-> **pic1:** توضح تركيب المكونات على Breadboard — Arduino، HC-SR04، Servo، واللمبات الحمراء والصفراء.
+> **pic1:** صورة للمشروع المُنفَّذ فعلياً — تُظهر Arduino والمكونات وذراع البوابة.
 
 ---
 
 ### صورة 2 — تفاصيل التوصيل
 
-![Smart Gate — تفاصيل التوصيل والأسلاك](pic2.jpg)
+![Smart Gate — تفاصيل التوصيل الفعلي](pic2.jpg)
 
-> **pic2:** تُظهر تفاصيل توصيل الأطراف (Pins) بين Arduino والحساس والسيرفو ونظام الإضاءة.
+> **pic2:** صورة مقرّبة لتوصيل الأسلاك والمكونات الحقيقية — الحساس، السيرفو، واللمبات.
 
 ---
 
@@ -206,21 +207,31 @@ if (distance <= DISTANCE_THRESHOLD && distance > 0) {
 
 ---
 
-## 🚀 طريقة التشغيل
+## 🚀 طريقة التشغيل (Hardware)
 
-### على Tinkercad
+### 1. تجميع الدائرة
 
-1. افتح محاكاة المشروع في Tinkercad.
-2. اضغط **Code → Text**.
-3. انسخ محتوى [`code/code.ino`](code/code.ino) والصقه.
-4. اضغط **Start Simulation** ▶.
+1. ركّب المكونات على **Breadboard** حسب جدول التوصيلات أعلاه.
+2. تأكد من توصيل **GND** مشترك بين كل المكونات.
+3. أضف **مقاومة 220Ω** أمام كل LED.
 
-### على Arduino IDE
+### 2. رفع الكود على Arduino
 
-1. افتح مجلد `code/` الذي يحتوي على `code.ino`.
-2. وصّل Arduino Uno عبر USB.
-3. اختر **Board: Arduino Uno** والمنفذ **COM** الصحيح.
-4. اضغط **Upload**.
+1. حمّل [Arduino IDE](https://www.arduino.cc/en/software).
+2. افتح ملف [`code/code.ino`](code/code.ino).
+3. وصّل **Arduino Uno** بالكمبيوتر عبر **كابل USB**.
+4. اختر **Tools → Board → Arduino Uno**.
+5. اختر **Tools → Port → COMx** (المنفذ الصحيح).
+6. اضغط **Upload** ⬆ لرفع البرنامج.
+
+### 3. التجربة
+
+1. بعد الرفع، يبدأ Arduino بالعمل مباشرة.
+2. قرّب يدك أو أي جسم من **HC-SR04** لمسافة **10 سم أو أقل**.
+3. راقب: البوابة تفتح 🟡 واللمبة الصفراء تضيء.
+4. ابعد الجسم: البوابة تغلق 🔴 واللمبة الحمراء تضيء.
+
+> **ملاحظة:** يمكنك فتح **Serial Monitor** (9600 baud) لمتابعة قراءات المسافة بالسنتيمتر.
 
 ---
 
@@ -234,5 +245,5 @@ if (distance <= DISTANCE_THRESHOLD && distance > 0) {
 ---
 
 <p align="center">
-  <sub>Smart Gate · HZCS-IoT · Smart Methods · Electronics Task 3</sub>
+  <sub>Smart Gate · HZCS-IoT · Smart Methods · Electronics Task 3 · Real Hardware</sub>
 </p>
